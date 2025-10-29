@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { CheckCircle2, Shield, Laptop, Phone, Mail, MapPin, Wifi, Lock, GraduationCap, Wrench, ShoppingCart, FileCheck } from 'lucide-react'
+import { CheckCircle2, Shield, Laptop, Phone, Mail, MapPin, Wifi, Lock, GraduationCap, Wrench, ShoppingCart, FileCheck, Sparkles, Code } from 'lucide-react'
 
 export default function Home() {
   const scrollToContact = () => {
@@ -58,7 +58,7 @@ export default function Home() {
               <h4 className="text-3xl font-bold text-slate-800">Conseil & Accompagnement</h4>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-lg hover:shadow-slate-500/20 hover:border-slate-300 transition-all">
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 transition-all">
                 <ShoppingCart className="w-10 h-10 text-slate-700 mb-4" />
                 <h5 className="text-xl font-semibold mb-3 text-slate-800">Aide à l'achat</h5>
                 <p className="text-slate-700 leading-relaxed">
@@ -72,7 +72,7 @@ export default function Home() {
                   Je vous accompagne pas à pas sur les sites web complexes (Impôts, Ameli, banque, prise de rendez-vous...). Fini l'angoisse de "mal cliquer".
                 </p>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-lg hover:shadow-slate-500/20 hover:border-slate-300 transition-all">
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 transition-all">
                 <Lock className="w-10 h-10 text-slate-700 mb-4" />
                 <h5 className="text-xl font-semibold mb-3 text-slate-800">Prévention & Sécurité</h5>
                 <p className="text-slate-700 leading-relaxed">
@@ -91,7 +91,7 @@ export default function Home() {
               <h4 className="text-3xl font-bold text-slate-800">Dépannage & Installation</h4>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-lg hover:shadow-slate-500/20 hover:border-slate-300 transition-all">
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 transition-all">
                 <Laptop className="w-10 h-10 text-slate-700 mb-4" />
                 <h5 className="text-xl font-semibold mb-3 text-slate-800">Urgence classique</h5>
                 <p className="text-slate-700 leading-relaxed">
@@ -117,13 +117,28 @@ export default function Home() {
               <h4 className="text-3xl font-bold text-slate-800">Formation & Découverte</h4>
               <span className="bg-slate-200 text-slate-700 px-4 py-1 rounded-full text-sm font-semibold border border-slate-300">Le Plus</span>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-sm border border-slate-200 hover:shadow-lg hover:shadow-slate-500/20 transition-all">
-              <p className="text-slate-700 leading-relaxed text-lg mb-4">
-                <strong className="text-slate-800">Initiation à l'IA :</strong> Démystifier ChatGPT pour vous et vos enfants (y compris pour surmonter les blocages scolaires, comme en maths !).
-              </p>
-              <p className="text-slate-700 leading-relaxed text-lg">
-                Support codage et aide aux projets web.
-              </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 transition-all">
+                <Sparkles className="w-10 h-10 text-slate-700 mb-4" />
+                <h5 className="text-xl font-semibold mb-3 text-slate-800">Initiation à l'IA</h5>
+                <p className="text-slate-700 leading-relaxed">
+                  Démystifier ChatGPT pour vous et vos enfants (y compris pour surmonter les blocages scolaires, comme en maths !).
+                </p>
+              </div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 transition-all">
+                <Sparkles className="w-10 h-10 text-slate-700 mb-4" />
+                <h5 className="text-xl font-semibold mb-3 text-slate-800">AI Prompting</h5>
+                <p className="text-slate-700 leading-relaxed">
+                  Apprenez à communiquer efficacement avec les outils d'IA pour obtenir les meilleurs résultats.
+                </p>
+              </div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 transition-all">
+                <Code className="w-10 h-10 text-slate-700 mb-4" />
+                <h5 className="text-xl font-semibold mb-3 text-slate-800">Software Tutoring</h5>
+                <p className="text-slate-700 leading-relaxed">
+                  Support codage et aide aux projets web pour débutants et intermédiaires.
+                </p>
+              </div>
             </div>
           </div>
         </div>
