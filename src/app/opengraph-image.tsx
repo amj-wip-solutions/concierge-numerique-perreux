@@ -52,7 +52,7 @@ export default async function Image() {
           <p
             style={{
               fontSize: 32,
-              color: '#475569',
+              color: '#454e56',
               marginBottom: 20,
               fontWeight: '400',
             }}

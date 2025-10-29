@@ -24,6 +24,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://lebonclick.fr'),
   title: "Lebonclick - Concierge Numérique",
   description: "Votre concierge numérique. Conseil, dépannage, accompagnement informatique à domicile. PC lent, imprimante, sites administratifs, aide à l'achat, IA, nous sommes présent pour toute vos questions tech.",
   keywords: "concierge numérique, dépannage informatique, Le Perreux-sur-Marne, assistance informatique, aide informatique seniors, réparation PC, installation imprimante",
