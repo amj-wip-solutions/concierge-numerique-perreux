@@ -16,15 +16,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="container mx-auto px-6 pt-16 pb-12 max-w-5xl">
-        <div className="text-center mb-8">
-          <div className="inline-block mb-4 animate-fade-in">
-            <span className="bg-gradient-to-r from-slate-700 to-slate-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-              🏡 LeBonClick • Service local
-            </span>
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            LeBonClick<br />
-            <span className="text-teal-600">Votre concierge numérique de confiance</span>
+        <div className="text-center mb-8 pt-12">
+          <h1 className="text-7xl font-bold text-slate-800 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              <span className="text-slate-700">Votre concierge numérique <br/> <span className="text-teal-600">de confiance</span></span>
           </h1>
           <p className="text-xl text-slate-700 mb-4 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Un PC lent ? Une imprimante qui boude ? Un site administratif incompréhensible ?
@@ -39,7 +33,7 @@ export default function Home() {
               <Phone className="w-8 h-8 animate-pulse-subtle" />
               <span>07 44 98 57 23</span>
             </a>
-            <p className="text-sm text-slate-600 mt-2">Disponible 7j/7 pour vos urgences</p>
+            <p className="text-sm text-slate-600">Disponible 7j/7 pour vos urgences</p>
           </div>
 
           <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
@@ -70,7 +64,7 @@ export default function Home() {
 
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-slate-200 shadow-lg shadow-slate-500/10">
           <p className="text-lg text-slate-700 leading-relaxed text-center">
-            <strong className="text-slate-800">LeBonClick</strong>, votre concierge numérique de quartier au Perreux-sur-Marne.
+            <strong className="text-slate-800">Lebonclick</strong>, votre concierge numérique de quartier au Perreux-sur-Marne.
             Mon objectif est simple : être votre <strong className="text-slate-800">interlocuteur de confiance</strong> pour toutes vos questions technologiques,
             des plus simples aux plus complexes. <strong className="text-teal-700">Vous ne serez plus jamais seul face à la technologie.</strong>
           </p>
