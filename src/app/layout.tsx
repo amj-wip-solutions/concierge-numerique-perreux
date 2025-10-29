@@ -43,10 +43,12 @@ export const metadata: Metadata = {
     description: "Service de proximité au Perreux-sur-Marne. Dépannage, conseil et accompagnement informatique. Intervention rapide, pédagogue et patient.",
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://lebonclick.fr/og-image.png',
+        secureUrl: 'https://lebonclick.fr/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Lebonclick - Concierge Numérique',
+        alt: 'Lebonclick - Votre concierge numérique de confiance - Le Perreux-sur-Marne - 07 44 98 57 23',
+        type: 'image/png',
       },
     ],
   },
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lebonclick - Concierge Numérique",
     description: "Votre concierge numérique. Intervention rapide et pédagogique.",
-    images: ['/og-image.png'],
+    images: ['https://lebonclick.fr/og-image.png'],
   },
   robots: {
     index: true,
