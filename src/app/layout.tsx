@@ -31,8 +31,22 @@ export const metadata: Metadata = {
   authors: [{ name: "Alexander McLean-Janet" }],
   creator: "Alexander McLean-Janet",
   icons: {
-    icon: '/favicon.png',
-    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: '/icon', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'icon',
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
   },
   openGraph: {
     type: "website",
@@ -43,11 +57,19 @@ export const metadata: Metadata = {
     description: "Service de proximité au Perreux-sur-Marne. Dépannage, conseil et accompagnement informatique. Intervention rapide, pédagogue et patient.",
     images: [
       {
-        url: 'https://lebonclick.fr/og-image.png',
-        secureUrl: 'https://lebonclick.fr/og-image.png',
+        url: '/opengraph-image',
+        secureUrl: 'https://lebonclick.fr/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'Lebonclick - Votre concierge numérique de confiance - Le Perreux-sur-Marne - 07 44 98 57 23',
+        type: 'image/png',
+      },
+      {
+        url: '/og-image.png',
+        secureUrl: 'https://lebonclick.fr/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Lebonclick - Votre concierge numérique de confiance',
         type: 'image/png',
       },
     ],
@@ -56,7 +78,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lebonclick - Concierge Numérique",
     description: "Votre concierge numérique. Intervention rapide et pédagogique.",
-    images: ['https://lebonclick.fr/og-image.png'],
+    images: ['/twitter-image'],
+    creator: '@lebonclick',
+    site: '@lebonclick',
   },
   robots: {
     index: true,
