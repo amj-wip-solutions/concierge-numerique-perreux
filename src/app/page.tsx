@@ -43,7 +43,7 @@ export default function Home() {
             <p className="text-sm text-slate-600">Disponible 7j/7 pour vos urgences • Réponse en moins de 2h</p>
           <div className="animate-fade-in-up mt-8" style={{ animationDelay: '0.5s' }}>
               <Button size="lg" onClick={scrollToContact} className="bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white text-lg px-8 py-6 shadow-lg shadow-slate-500/30 transition-all hover:scale-105 cursor-pointer">
-                  Prendre rendez-vous gratuitement
+                  Prendez rendez-vous maintenant!
               </Button>
           </div>
           </div>
@@ -214,42 +214,28 @@ export default function Home() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-teal-600 text-teal-600" />
-                ))}
-              </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
               <p className="text-slate-700 mb-4 italic">
-                "Enfin quelqu'un qui prend le temps d'expliquer sans me faire sentir incompétente ! Mon ordinateur est comme neuf et j'ai même appris à faire mes démarches en ligne."
+                  "Dans le passé, j'ai été victime d'une escroquerie en ligne. Mais grâce à de précieux conseils et astuces j'ai appris à reconnaître les indices suspects."              </p>
+              <p className="font-semibold text-slate-800">Roxane M.</p>
+            </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
+              <p className="text-slate-700 mb-4 italic">
+                  "Formidable !!!
+                  Simple ! Rapide  mon imprimante ne marchait plus et mon PC était lent  ! Grasse a l’intervention d’Alex j’évite le changement de matériel
+                  Le morale revient !!! Bravo !!!"
               </p>
               <p className="font-semibold text-slate-800">Florient, 68 ans</p>
-              <p className="text-sm text-slate-600">Le Perreux-sur-Marne</p>
-            </div>
+              <p className="text-sm text-slate-600">Paris</p>
+          </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-teal-600 text-teal-600" />
-                ))}
-              </div>
+              <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
               <p className="text-slate-700 mb-4 italic">
-                "Intervention rapide pour notre PME. Réseau configuré, sécurité renforcée, et formation de l'équipe. Service pro et tarifs honnêtes."
+                "Mes enfants avaient du mal en maths. Grâce à ChatGPT et ses explications j'étais beaucoup plus à l'aise pour leur expliquer les choses, et j'ai pu rafraîchir mes propres connaissances."
               </p>
-              <p className="font-semibold text-slate-800">Roxane M.</p>
-              <p className="text-sm text-slate-600">Gérant, Petite entreprise locale</p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-teal-600 text-teal-600" />
-                ))}
-              </div>
-              <p className="text-slate-700 mb-4 italic">
-                "Mes enfants avaient du mal en maths. Grâce à ChatGPT et ses explications, ils comprennent mieux et gagnent en autonomie. Merci !"
-              </p>
-              <p className="font-semibold text-slate-800">Sophie M.</p>
+              <p className="font-semibold text-slate-800">Yvonne M.</p>
               <p className="text-sm text-slate-600">Maman de 2 enfants</p>
             </div>
           </div>
