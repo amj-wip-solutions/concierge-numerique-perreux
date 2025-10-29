@@ -20,15 +20,15 @@ export default function Home() {
           <h1 className="text-7xl font-bold text-slate-800 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <span className="text-slate-700">Votre concierge numérique <br/> <span className="text-teal-600">de confiance</span></span>
           </h1>
-          <p className="text-xl text-slate-700 mb-1 max-w-3xl mx-auto leading-relaxed animate-fade-in-up mt-12" style={{ animationDelay: '0.2s' }}>
-            Un PC lent ? Une imprimante qui boude ? Un site administratif incompréhensible ?
+          <p className="text-lg text-slate-700 mb-1 max-w-3xl mx-auto leading-relaxed animate-fade-in-up mt-12" style={{ animationDelay: '0.2s' }}>
+            Un PC lent ? Une imprimante qui boude ? Un site administratif incompréhensible ? Comment utiliser l'IA?
           </p>
           <p className="text-2xl font-semibold text-slate-800 mb-2 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             Ne restez pas seul face au numérique.
           </p>
 
           {/* Prominent Phone Number */}
-          <div className="mb-8 animate-fade-in-up mt-16" style={{ animationDelay: '0.4s' }}>
+          <div className="mb-8 animate-fade-in-up mt-12" style={{ animationDelay: '0.4s' }}>
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-1">
               <a href="tel:+33744985723" className="inline-flex items-center gap-3 text-2xl md:text-3xl font-bold text-slate-800 hover:text-teal-600 transition-all hover:scale-105 cursor-pointer">
                 <Phone className="w-7 h-7 md:w-8 md:h-8 animate-pulse-subtle" />
@@ -216,13 +216,23 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
 
             <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
-              <p className="text-slate-700 mb-4 italic">
+                <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-teal-600 text-teal-600" />
+                    ))}
+                </div>
+                <p className="text-slate-700 mb-4 italic">
                   "Dans le passé, j'ai été victime d'une escroquerie en ligne. Mais grâce à de précieux conseils et astuces j'ai appris à reconnaître les indices suspects."              </p>
               <p className="font-semibold text-slate-800">Roxane M.</p>
             </div>
 
               <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
-              <p className="text-slate-700 mb-4 italic">
+                  <div className="flex gap-1 mb-4">
+                      {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 fill-teal-600 text-teal-600" />
+                      ))}
+                  </div>
+                  <p className="text-slate-700 mb-4 italic">
                   "Formidable !!!
                   Simple ! Rapide  mon imprimante ne marchait plus et mon PC était lent  ! Grasse a l’intervention d’Alex j’évite le changement de matériel
                   Le morale revient !!! Bravo !!!"
@@ -232,7 +242,12 @@ export default function Home() {
           </div>
 
               <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
-              <p className="text-slate-700 mb-4 italic">
+                  <div className="flex gap-1 mb-4">
+                      {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 fill-teal-600 text-teal-600" />
+                      ))}
+                  </div>
+                  <p className="text-slate-700 mb-4 italic">
                 "Mes enfants avaient du mal en maths. Grâce à ChatGPT et ses explications j'étais beaucoup plus à l'aise pour leur expliquer les choses, et j'ai pu rafraîchir mes propres connaissances."
               </p>
               <p className="font-semibold text-slate-800">Yvonne M.</p>

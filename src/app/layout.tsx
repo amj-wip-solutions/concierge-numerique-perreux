@@ -1,15 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Inter: Modern, highly readable sans-serif - perfect for body text and UI
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Lora: Warm, friendly serif - perfect for headings to build trust
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const viewport: Viewport = {
@@ -20,8 +24,8 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: "Lebonclick - Concierge Numérique Le Perreux-sur-Marne | Alexander McLean-Janet",
-  description: "Votre concierge numérique au Perreux-sur-Marne. Conseil, dépannage, accompagnement informatique à domicile. PC lent, imprimante, sites administratifs, aide à l'achat.",
+  title: "Lebonclick - Concierge Numérique",
+  description: "Votre concierge numérique. Conseil, dépannage, accompagnement informatique à domicile. PC lent, imprimante, sites administratifs, aide à l'achat, IA, nous sommes présent pour toute vos questions tech.",
   keywords: "concierge numérique, dépannage informatique, Le Perreux-sur-Marne, assistance informatique, aide informatique seniors, réparation PC, installation imprimante",
   authors: [{ name: "Alexander McLean-Janet" }],
   creator: "Alexander McLean-Janet",
@@ -36,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Lebonclick - Concierge Numérique",
-    description: "Votre concierge numérique au Perreux-sur-Marne. Intervention rapide et pédagogique.",
+    description: "Votre concierge numérique. Intervention rapide et pédagogique.",
   },
   robots: {
     index: true,
@@ -56,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${lora.variable} antialiased font-sans`}
       >
         {children}
       </body>

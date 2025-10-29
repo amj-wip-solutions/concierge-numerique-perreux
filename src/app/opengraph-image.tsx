@@ -22,7 +22,7 @@ export default async function Image() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          fontFamily: 'system-ui, sans-serif',
+          fontFamily: 'Inter, system-ui, sans-serif',
         }}
       >
         <div
@@ -37,22 +37,24 @@ export default async function Image() {
         >
           <h1
             style={{
-              fontSize: 72,
-              fontWeight: 'bold',
+              fontSize: 68,
+              fontWeight: '700',
               color: '#1e293b',
               marginBottom: 30,
               lineHeight: 1.2,
+              letterSpacing: '-0.02em',
             }}
           >
             Votre concierge numérique
             <br />
-            <span style={{ color: '#14b8a6' }}>de confiance</span>
+            <span style={{ color: '#14b8a6', fontWeight: '800' }}>de confiance</span>
           </h1>
           <p
             style={{
-              fontSize: 36,
-              color: '#334155',
+              fontSize: 32,
+              color: '#475569',
               marginBottom: 20,
+              fontWeight: '400',
             }}
           >
             Dépannage • Formation • Accompagnement
@@ -60,25 +62,27 @@ export default async function Image() {
           <div
             style={{
               background: 'white',
-              padding: '15px 30px',
+              padding: '15px 35px',
               borderRadius: 12,
-              fontSize: 24,
+              fontSize: 26,
               color: '#14b8a6',
-              fontWeight: 600,
+              fontWeight: '600',
               marginTop: 30,
+              boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
             }}
           >
             Le Perreux-sur-Marne
           </div>
           <div
             style={{
-              fontSize: 42,
-              fontWeight: 'bold',
+              fontSize: 48,
+              fontWeight: '700',
               color: '#1e293b',
               marginTop: 40,
+              letterSpacing: '-0.01em',
             }}
           >
-            ☎️ 07 44 98 57 23
+            📞 07 44 98 57 23
           </div>
         </div>
       </div>
