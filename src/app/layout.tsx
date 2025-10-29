@@ -30,6 +30,10 @@ export const metadata: Metadata = {
   keywords: "concierge numérique, dépannage informatique, Le Perreux-sur-Marne, assistance informatique, aide informatique seniors, réparation PC, installation imprimante",
   authors: [{ name: "Alexander McLean-Janet" }],
   creator: "Alexander McLean-Janet",
+  icons: {
+    icon: '/favicon.png',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -37,11 +41,20 @@ export const metadata: Metadata = {
     siteName: "Lebonclick - Concierge Numérique",
     title: "Lebonclick - Votre concierge numérique de confiance",
     description: "Service de proximité au Perreux-sur-Marne. Dépannage, conseil et accompagnement informatique. Intervention rapide, pédagogue et patient.",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Lebonclick - Concierge Numérique',
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Lebonclick - Concierge Numérique",
     description: "Votre concierge numérique. Intervention rapide et pédagogique.",
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,

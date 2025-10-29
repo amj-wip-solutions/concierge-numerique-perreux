@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Favicon</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        button {
+            background: #14b8a6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0d9488;
+        }
+        .instructions {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate Favicon and OG Images</h1>
+
+    <div class="instructions">
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Click the buttons below to download the images</li>
+            <li>Save them to the <code>public</code> folder of your project</li>
+            <li>Commit and deploy</li>
+        </ol>
+    </div>
+
+    <h2>Favicon (32x32)</h2>
+    <canvas id="faviconCanvas" width="32" height="32"></canvas>
+    <br>
+    <button onclick="downloadFavicon()">Download favicon.png</button>
+
+    <h2>Apple Icon (180x180)</h2>
+    <canvas id="appleCanvas" width="180" height="180"></canvas>
+    <br>
+    <button onclick="downloadAppleIcon()">Download apple-touch-icon.png</button>
+
+    <h2>Open Graph Image (1200x630)</h2>
+    <canvas id="ogCanvas" width="1200" height="630"></canvas>
+    <br>
+    <button onclick="downloadOGImage()">Download og-image.png</button>
+
+    <script>
+        // Draw Favicon
+        function drawFavicon() {
+            const canvas = document.getElementById('faviconCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Background
+            ctx.fillStyle = '#14b8a6';
+            ctx.fillRect(0, 0, 32, 32);
+
+            // Text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 20px system-ui';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('L', 16, 18);
+        }
+
+        // Draw Apple Icon
+        function drawAppleIcon() {
+            const canvas = document.getElementById('appleCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Background
+            ctx.fillStyle = '#14b8a6';
+            ctx.fillRect(0, 0, 180, 180);
+
+            // Text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 120px system-ui';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('L', 90, 100);
+        }
+
+        // Draw OG Image
+        function drawOGImage() {
+            const canvas = document.getElementById('ogCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+            gradient.addColorStop(0, '#f1f5f9');
+            gradient.addColorStop(0.5, '#ccfbf1');
+            gradient.addColorStop(1, '#e2e8f0');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 630);
+
+            // Title line 1
+            ctx.fillStyle = '#1e293b';
+            ctx.font = 'bold 68px system-ui';
+            ctx.textAlign = 'center';
+            ctx.fillText('Votre concierge numérique', 600, 200);
+
+            // Title line 2
+            ctx.fillStyle = '#14b8a6';
+            ctx.font = 'bold 68px system-ui';
+            ctx.fillText('de confiance', 600, 280);
+
+            // Services
+            ctx.fillStyle = '#475569';
+            ctx.font = '32px system-ui';
+            ctx.fillText('Dépannage • Formation • Accompagnement', 600, 350);
+
+            // Location badge background
+            ctx.fillStyle = 'white';
+            ctx.shadowColor = 'rgba(0,0,0,0.08)';
+            ctx.shadowBlur = 12;
+            ctx.shadowOffsetY = 4;
+            ctx.fillRect(450, 390, 300, 60, 12);
+            ctx.shadowBlur = 0;
+            ctx.shadowOffsetY = 0;
+
+            // Location text
+            ctx.fillStyle = '#14b8a6';
+            ctx.font = '600 26px system-ui';
+            ctx.fillText('Le Perreux-sur-Marne', 600, 428);
+
+            // Phone
+            ctx.fillStyle = '#1e293b';
+            ctx.font = 'bold 48px system-ui';
+            ctx.fillText('📞 07 44 98 57 23', 600, 520);
+        }
+
+        // Download functions
+        function downloadFavicon() {
+            const canvas = document.getElementById('faviconCanvas');
+            const link = document.createElement('a');
+            link.download = 'favicon.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        function downloadAppleIcon() {
+            const canvas = document.getElementById('appleCanvas');
+            const link = document.createElement('a');
+            link.download = 'apple-touch-icon.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        function downloadOGImage() {
+            const canvas = document.getElementById('ogCanvas');
+            const link = document.createElement('a');
+            link.download = 'og-image.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Draw everything on load
+        window.onload = () => {
+            drawFavicon();
+            drawAppleIcon();
+            drawOGImage();
+        };
+    </script>
+</body>
+</html>
+
