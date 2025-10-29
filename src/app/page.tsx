@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import { Header } from '@/components/header'
-import { CheckCircle2, Shield, Laptop, Phone, Mail, MapPin, Wifi, Lock, GraduationCap, Wrench, ShoppingCart, FileCheck, Sparkles, Code, Clock, Star, Users, Briefcase, Brain, MessageCircle, ChevronDown, TrendingUp, Award, Calendar } from 'lucide-react'
+import { CheckCircle2, Shield, Laptop, Phone, Mail, MapPin, Wifi, Lock, GraduationCap, Wrench, ShoppingCart, FileCheck, Sparkles, Code, Star, Briefcase, Brain, MessageCircle, Smile, Zap } from 'lucide-react'
 
 export default function Home() {
   const scrollToContact = () => {
@@ -15,9 +15,9 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-16 pb-12 max-w-5xl">
+      <section className="container mx-auto px-6 pt-12 pb-12 max-w-5xl">
         <div className="text-center mb-8 pt-8">
-          <h1 className="text-7xl font-bold text-slate-800 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-7xl font-bold text-slate-800 mb-6 animate-fade-in-up leading-22" style={{ animationDelay: '0.1s' }}>
               <span className="text-slate-700">Votre concierge numérique <br/> <span className="text-teal-600">de confiance</span></span>
           </h1>
           <p className="text-lg text-slate-700 mb-1 max-w-3xl mx-auto leading-relaxed animate-fade-in-up mt-12" style={{ animationDelay: '0.2s' }}>
@@ -52,20 +52,20 @@ export default function Home() {
         {/* Trust Indicators */}
         <div className="grid md:grid-cols-3 gap-4 mb-12 mt-12">
           <div className="bg-gradient-to-br from-white to-teal-50 backdrop-blur-sm rounded-xl p-4 border border-teal-200 shadow-sm text-center animate-fade-in-up hover:scale-105 transition-transform cursor-pointer" style={{ animationDelay: '0.6s' }}>
-            <Clock className="w-8 h-8 text-teal-600 mx-auto mb-2" />
-            <p className="font-semibold text-slate-800">Intervention rapide</p>
-            <p className="text-sm text-slate-600">Sous 48h en semaine</p>
-          </div>
-          <div className="bg-gradient-to-br from-white to-teal-50 backdrop-blur-sm rounded-xl p-4 border border-teal-200 shadow-sm text-center animate-fade-in-up hover:scale-105 transition-transform cursor-pointer" style={{ animationDelay: '0.7s' }}>
-            <Shield className="w-8 h-8 text-teal-600 mx-auto mb-2" />
+            <Smile className="w-8 h-8 text-teal-600 mx-auto mb-2" />
             <p className="font-semibold text-slate-800">Garantie satisfaction</p>
             <p className="text-sm text-slate-600">Problème non résolu = remboursé</p>
           </div>
-            <div className="bg-gradient-to-br from-white to-teal-50 backdrop-blur-sm rounded-xl p-4 border border-teal-200 shadow-sm text-center animate-fade-in-up hover:scale-105 transition-transform cursor-pointer" style={{ animationDelay: '0.7s' }}>
-                <Star className="w-8 h-8 text-teal-600 mx-auto mb-2" />
-                <p className="font-semibold text-slate-800">Service de proximité</p>
-                <p className="text-sm text-slate-600">Déplacement à domicile</p>
-            </div>
+          <div className="bg-gradient-to-br from-white to-teal-50 backdrop-blur-sm rounded-xl p-4 border border-teal-200 shadow-sm text-center animate-fade-in-up hover:scale-105 transition-transform cursor-pointer" style={{ animationDelay: '0.7s' }}>
+            <Zap className="w-8 h-8 text-teal-600 mx-auto mb-2" />
+            <p className="font-semibold text-slate-800">Intervention rapide</p>
+            <p className="text-sm text-slate-600">Sous 48h en semaine</p>
+          </div>
+          <div className="bg-gradient-to-br from-white to-teal-50 backdrop-blur-sm rounded-xl p-4 border border-teal-200 shadow-sm text-center animate-fade-in-up hover:scale-105 transition-transform cursor-pointer" style={{ animationDelay: '0.8s' }}>
+            <Star className="w-8 h-8 text-teal-600 mx-auto mb-2" />
+            <p className="font-semibold text-slate-800">Service de proximité</p>
+            <p className="text-sm text-slate-600">Déplacement à domicile</p>
+          </div>
         </div>
       </section>
 
@@ -260,7 +260,7 @@ export default function Home() {
           <div className="bg-white rounded-2xl shadow-xl shadow-slate-500/20 p-10 md:p-14 border border-slate-200">
             <h2 className="text-4xl font-bold text-slate-800 mb-4 text-center">Contactez-moi</h2>
             <p className="text-center text-lg text-slate-700 mb-10">
-              Pour un diagnostic ou un simple conseil
+              Pour faire un diagnostic ou un simple conseil
             </p>
 
             <div className="space-y-6 max-w-sm mx-auto">
