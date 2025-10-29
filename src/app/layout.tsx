@@ -32,20 +32,11 @@ export const metadata: Metadata = {
     siteName: "Lebonclick - Concierge Numérique",
     title: "Lebonclick - Votre concierge numérique de confiance",
     description: "Service de proximité au Perreux-sur-Marne. Dépannage, conseil et accompagnement informatique. Intervention rapide, pédagogue et patient.",
-    images: [
-      {
-        url: "/logo.svg",
-        width: 2000,
-        height: 2000,
-        alt: "Lebonclick Logo",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Lebonclick - Concierge Numérique",
     description: "Votre concierge numérique au Perreux-sur-Marne. Intervention rapide et pédagogique.",
-    images: ["/logo.svg"],
   },
   robots: {
     index: true,
@@ -54,10 +45,6 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
     },
-  },
-  icons: {
-    icon: "/logo.svg",
-    apple: "/logo.svg",
   },
 };
 

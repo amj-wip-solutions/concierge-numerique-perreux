@@ -5,6 +5,9 @@ import { Header } from '@/components/header'
 import { CheckCircle2, Shield, Laptop, Phone, Mail, MapPin, Wifi, Lock, GraduationCap, Wrench, ShoppingCart, FileCheck, Sparkles, Code, Clock, Star, Users, Briefcase, Brain, MessageCircle, ChevronDown, TrendingUp, Award, Calendar } from 'lucide-react'
 
 export default function Home() {
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 via-teal-50 to-slate-200">
@@ -13,7 +16,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="container mx-auto px-6 pt-16 pb-12 max-w-5xl">
-        <div className="text-center mb-8 pt-12">
+        <div className="text-center mb-8 pt-8">
           <h1 className="text-7xl font-bold text-slate-800 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <span className="text-slate-700">Votre concierge numérique <br/> <span className="text-teal-600">de confiance</span></span>
           </h1>
@@ -38,6 +41,11 @@ export default function Home() {
               </a>
             </div>
             <p className="text-sm text-slate-600">Disponible 7j/7 pour vos urgences • Réponse en moins de 2h</p>
+          <div className="animate-fade-in-up mt-8" style={{ animationDelay: '0.5s' }}>
+              <Button size="lg" onClick={scrollToContact} className="bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white text-lg px-8 py-6 shadow-lg shadow-slate-500/30 transition-all hover:scale-105 cursor-pointer">
+                  Prendre rendez-vous gratuitement
+              </Button>
+          </div>
           </div>
         </div>
 
@@ -215,7 +223,7 @@ export default function Home() {
               <p className="text-slate-700 mb-4 italic">
                 "Enfin quelqu'un qui prend le temps d'expliquer sans me faire sentir incompétente ! Mon ordinateur est comme neuf et j'ai même appris à faire mes démarches en ligne."
               </p>
-              <p className="font-semibold text-slate-800">Marie, 68 ans</p>
+              <p className="font-semibold text-slate-800">Florient, 68 ans</p>
               <p className="text-sm text-slate-600">Le Perreux-sur-Marne</p>
             </div>
 
@@ -228,7 +236,7 @@ export default function Home() {
               <p className="text-slate-700 mb-4 italic">
                 "Intervention rapide pour notre PME. Réseau configuré, sécurité renforcée, et formation de l'équipe. Service pro et tarifs honnêtes."
               </p>
-              <p className="font-semibold text-slate-800">Thomas D.</p>
+              <p className="font-semibold text-slate-800">Roxane M.</p>
               <p className="text-sm text-slate-600">Gérant, Petite entreprise locale</p>
             </div>
 
