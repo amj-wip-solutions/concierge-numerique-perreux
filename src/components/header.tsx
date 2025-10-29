@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Phone } from 'lucide-react'
+import {MessageCircle, Phone} from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 export function Header() {
@@ -15,6 +15,10 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <header className={`border-b-2 border-teal-500 shadow-md sticky top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/90 backdrop-blur-md' : 'bg-white'
@@ -22,16 +26,20 @@ export function Header() {
       <div className="container mx-auto px-4 py-2 md:py-3">
         <div className="flex items-center justify-between">
           {/* Logo and Brand */}
-          <div className="flex items-center">
+          <button
+            onClick={scrollToTop}
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+            aria-label="Retour en haut"
+          >
             <Image
               src="/logo.svg"
               alt="Lebonclick Logo"
               width={48}
               height={48}
-              className="w-10 h-10 md:w-12 md:h-12 rotate-45"
+              className="w-10 h-10 md:w-12 md:h-12 rotate-45 scale-[175%]"
               priority
             />
-            <div>
+            <div className="text-left">
               <h1 className="text-xl md:text-2xl font-bold text-slate-800">
                 Lebonclick
               </h1>
@@ -39,16 +47,26 @@ export function Header() {
                 Votre concierge numérique
               </p>
             </div>
-          </div>
+          </button>
+            <div className="flex items-center gap-4 md:gap-6">
 
-          {/* Phone Number - Desktop */}
-          <a
-            href="tel:+33744985723"
-            className="hidden md:flex items-center gap-2 bg-gradient-to-r from-teal-600 to-teal-700 text-white px-4 py-2 rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all hover:scale-105 shadow-lg"
-          >
-            <Phone className="w-5 h-5" />
-            <span className="text-lg font-bold">07 44 98 57 23</span>
-          </a>
+
+                {/* Phone Number - Desktop */}
+                <a
+                    href="tel:+33744985723"
+                    className="hidden md:flex items-center gap-2 bg-gradient-to-r from-teal-600 to-teal-700 text-white px-4 py-2 rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all hover:scale-105 shadow-lg"
+                >
+                    <Phone className="w-5 h-5" />
+                    <span className="text-lg font-bold">07 44 98 57 23</span>
+                </a>
+                <a
+                    href="https://wa.me/33744985723" target="_blank" rel="noopener noreferrer"
+                    className="hidden md:flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-all hover:scale-105 shadow-lg"
+                >
+                    <MessageCircle className="w-5 h-5" />
+                    <span className="text-lg font-bold">WhatsApp</span>
+                </a>
+            </div>
 
           {/* Phone Number - Mobile */}
           <a

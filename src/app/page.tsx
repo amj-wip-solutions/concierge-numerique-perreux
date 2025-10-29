@@ -43,7 +43,7 @@ export default function Home() {
             <p className="text-sm text-slate-600">Disponible 7j/7 pour vos urgences • Réponse en moins de 2h</p>
           <div className="animate-fade-in-up mt-8" style={{ animationDelay: '0.5s' }}>
               <Button size="lg" onClick={scrollToContact} className="bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white text-lg px-8 py-6 shadow-lg shadow-slate-500/30 transition-all hover:scale-105 cursor-pointer">
-                  Prendez rendez-vous maintenant!
+                  Prenez rendez-vous maintenant!
               </Button>
           </div>
           </div>
@@ -101,7 +101,7 @@ export default function Home() {
               </div>
               <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
                 <Briefcase className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:-rotate-12" />
-                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Support PME</h5>
+                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Support TPE</h5>
                 <p className="text-slate-700 leading-relaxed">
                   Assistance IT pour petites entreprises : réseau, sécurité, maintenance préventive et formation des équipes.
                 </p>
@@ -109,41 +109,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Formation & Découverte */}
-          <div className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center shadow-lg shadow-slate-500/30">
-                <GraduationCap className="w-7 h-7 text-white" />
-              </div>
-              <h4 className="text-3xl font-bold text-slate-800">Formation & Découverte</h4>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <Sparkles className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:-rotate-12" />
-                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Initiation à l'IA</h5>
-                <p className="text-slate-700 leading-relaxed">
-                  Démystifier l'IA, comment elle fonctionne et comment elle peut vous aider.
-                </p>
-              </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <Brain className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:rotate-12" />
-                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">IA Prompting</h5>
-                <p className="text-slate-700 leading-relaxed">
-                  Apprenez à communiquer efficacement avec les outils d'IA pour obtenir les meilleurs résultats.
-                </p>
-              </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <Code className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:-rotate-6" />
-                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Software Tutoring</h5>
-                <p className="text-slate-700 leading-relaxed">
-                  Support codage et aide aux projets web pour débutants et intermédiaires.
-                </p>
-              </div>
-            </div>
-          </div>
-
             {/* Conseil & Accompagnement */}
-            <div>
+            <div className="mb-16">
                 <div className="flex items-center gap-3 mb-8">
                     <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center shadow-lg shadow-slate-500/30">
                         <Shield className="w-7 h-7 text-white" />
@@ -174,6 +141,38 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+          {/* Formation & Découverte */}
+          <div>
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center shadow-lg shadow-slate-500/30">
+                <GraduationCap className="w-7 h-7 text-white" />
+              </div>
+              <h4 className="text-3xl font-bold text-slate-800">Formation & Découverte</h4>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                <Sparkles className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:-rotate-12" />
+                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Initiation à l'IA</h5>
+                <p className="text-slate-700 leading-relaxed">
+                  Démystifier l'IA, comment elle fonctionne et comment elle peut vous aider.
+                </p>
+              </div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                <Brain className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:rotate-12" />
+                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">IA Prompting</h5>
+                <p className="text-slate-700 leading-relaxed">
+                  Apprenez à communiquer efficacement avec les outils d'IA pour obtenir les meilleurs résultats.
+                </p>
+              </div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                <Code className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:-rotate-6" />
+                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Software Tutoring</h5>
+                <p className="text-slate-700 leading-relaxed">
+                  Support codage et aide aux projets web pour débutants et intermédiaires.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -222,8 +221,8 @@ export default function Home() {
                     ))}
                 </div>
                 <p className="text-slate-700 mb-4 italic">
-                  "Dans le passé, j'ai été victime d'une escroquerie en ligne. Mais grâce à de précieux conseils et astuces j'ai appris à reconnaître les indices suspects."              </p>
-              <p className="font-semibold text-slate-800">Roxane M.</p>
+                  "Dans le passé, j'ai été victime d'une escroquerie. Grâce à vos astuces, j'ai appris à reconnaître les signes suspects. Je suis bien plus vigilante et je me sens plus en sûreté!"</p>
+              <p className="font-semibold text-slate-800">Roxane M. 57 ans </p>
             </div>
 
               <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
@@ -234,11 +233,10 @@ export default function Home() {
                   </div>
                   <p className="text-slate-700 mb-4 italic">
                   "Formidable !!!
-                  Simple ! Rapide  mon imprimante ne marchait plus et mon PC était lent  ! Grasse a l’intervention d’Alex j’évite le changement de matériel
-                  Le morale revient !!! Bravo !!!"
+                  Simple ! Rapide  mon imprimante ne marchait plus et mon PC était lent  ! Grâce a l’intervention d’Alex j’évite le changement de matériel
+                  Le moral revient !!! Bravo !!!"
               </p>
-              <p className="font-semibold text-slate-800">Florient, 68 ans</p>
-              <p className="text-sm text-slate-600">Paris</p>
+              <p className="font-semibold text-slate-800">Florient, 69 ans</p>
           </div>
 
               <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
@@ -248,10 +246,9 @@ export default function Home() {
                       ))}
                   </div>
                   <p className="text-slate-700 mb-4 italic">
-                "Mes enfants avaient du mal en maths. Grâce à ChatGPT et ses explications j'étais beaucoup plus à l'aise pour leur expliquer les choses, et j'ai pu rafraîchir mes propres connaissances."
+                      "Alex m'a été d'un grand soutien pour mes problèmes informatiques. Il est très à l'écoute et intervient rapidement. Je recommande vivement ses services."
               </p>
-              <p className="font-semibold text-slate-800">Yvonne M.</p>
-              <p className="text-sm text-slate-600">Maman de 2 enfants</p>
+              <p className="font-semibold text-slate-800">Yvonne D. 67 ans</p>
             </div>
           </div>
         </div>
@@ -259,14 +256,14 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="bg-gradient-to-b from-slate-100 via-teal-50/30 to-slate-300 py-20">
-        <div className="container mx-auto px-6 max-w-4xl">
+        <div className="container mx-auto px-6 max-w-3xl">
           <div className="bg-white rounded-2xl shadow-xl shadow-slate-500/20 p-10 md:p-14 border border-slate-200">
             <h2 className="text-4xl font-bold text-slate-800 mb-4 text-center">Contactez-moi</h2>
             <p className="text-center text-lg text-slate-700 mb-10">
               Pour un diagnostic ou un simple conseil
             </p>
 
-            <div className="space-y-6 max-w-md mx-auto">
+            <div className="space-y-6 max-w-sm mx-auto">
               <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 cursor-pointer">
                 <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-slate-500/30">
                   <Phone className="w-6 h-6 text-white" />
@@ -285,8 +282,8 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-sm text-slate-700 font-medium">Email</p>
-                  <a href="mailto:contact@concierge-numerique.fr" className="text-lg font-semibold text-slate-800 hover:text-slate-700 break-all">
-                    contact@concierge-numerique.fr
+                  <a href="mailto:alex@lebonclick.fr" className="text-lg font-semibold text-slate-800 hover:text-slate-700 break-all">
+                      alex@lebonclick.fr
                   </a>
                 </div>
               </div>
@@ -309,7 +306,7 @@ export default function Home() {
       <footer className="bg-slate-900 text-slate-300 py-10">
         <div className="container mx-auto px-6 text-center">
           <p className="text-lg mb-2">
-            <strong className="text-white">Lebonclick</strong> — Concierge Numérique • Le Perreux-sur-Marne
+            <strong className="text-white">Lebonclick</strong> — Concierge Numérique
           </p>
           <p className="text-sm text-slate-400">
             &copy; {new Date().getFullYear()} Tous droits réservés.
