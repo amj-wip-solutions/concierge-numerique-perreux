@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Concierge Numérique - Site Web
 
-## Getting Started
+Site web professionnel pour le service de concierge numérique au Perreux-sur-Marne.
 
-First, run the development server:
+## Description
+
+Site vitrine une page pour présenter les services de conseil, dépannage et accompagnement informatique à domicile.
+
+**Design traditionnel et accessible** conçu spécifiquement pour un public senior :
+- Texte large et très lisible (text-xl à text-4xl)
+- Couleurs chaudes et rassurantes (ambre, bleu doux, vert)
+- Mise en page claire avec beaucoup d'espace blanc
+- Navigation simple et intuitive
+- Style professionnel et chaleureux
+
+## Technologies
+
+- **Next.js 15** - Framework React
+- **TypeScript** - Typage statique
+- **Tailwind CSS v4** - Styling
+- **shadcn/ui** - Composants UI
+- **Lucide React** - Icônes
+
+## Développement
 
 ```bash
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Créer un build optimisé
+npm run build
 
-## Learn More
+# Lancer le serveur de production
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Structure du projet
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/
+│   ├── layout.tsx       # Layout principal avec métadonnées
+│   ├── page.tsx         # Page d'accueil
+│   └── globals.css      # Styles globaux
+└── components/
+    ├── ui/              # Composants shadcn/ui
+    ├── hero-section.tsx # Section hero avec CTA
+    └── contact-form.tsx # Formulaire de contact
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Sections du site
 
-## Deploy on Vercel
+1. **Hero** - Titre principal et call-to-action
+2. **Introduction** - Présentation du concierge numérique
+3. **Services** - 3 catégories de services (Conseil, Dépannage, Formation)
+4. **Approche** - Valeurs (Simple, Rapide, Pédagogique)
+5. **Contact** - Formulaire et coordonnées
+6. **Footer** - Informations légales
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Personnalisation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pour personnaliser les informations de contact, modifiez les valeurs dans `src/app/page.tsx` :
+- Téléphone
+- Email
+- Zone d'intervention
+
+## Déploiement
+
+Le site peut être déployé sur :
+- [Vercel](https://vercel.com) (recommandé pour Next.js)
+- [Netlify](https://netlify.com)
+- Tout hébergeur supportant Node.js
+
+## À faire
+
+- [ ] Ajouter les coordonnées réelles (téléphone, email)
+- [ ] Configurer l'envoi du formulaire de contact (API, email service)
+- [ ] Ajouter Google Analytics ou autre tracking
+- [ ] Optimiser les images SEO
+- [ ] Ajouter un favicon personnalisé
+
+## License
+
+© 2025 Alexander McLean-Janet - Tous droits réservés
+
