@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Lora } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 // Inter: Modern, highly readable sans-serif - perfect for body text and UI
@@ -262,6 +263,7 @@ export default function RootLayout({
         className={`${inter.variable} ${lora.variable} antialiased font-sans`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
