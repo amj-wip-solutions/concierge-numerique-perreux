@@ -91,7 +91,7 @@ export default function Home() {
                             <div className="space-y-4">
                                 <div className="flex items-start gap-3">
                                     <Shield className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                                    <p className="text-sm text-slate-600">Prestataire agréé Service à la Personne</p>
+                                    <p className="text-sm text-slate-600">Prestataire agréé Service à la Personne (SAP)</p>
                                 </div>
                                 <div className="flex items-start gap-3">
                                     <Euro className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
@@ -201,7 +201,6 @@ export default function Home() {
             <section id="contact" className="py-20 bg-gradient-to-br from-teal-50 to-white text-slate-900">
                 <div className="container mx-auto px-6 max-w-4xl text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Besoin d'aide ?</h2>
-                    <p className="text-lg text-slate-600 mb-10">Je suis disponible du Lundi au Samedi, de 9h à 19h.</p>
 
                     <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
                         <a href="tel:+33744985723" className="group flex items-center justify-center gap-4 bg-white text-slate-900 p-6 rounded-xl shadow-md border border-slate-100 hover:shadow-xl hover:border-teal-200 transition-all cursor-pointer">
@@ -234,6 +233,8 @@ export default function Home() {
                         <span>Nogent-sur-Marne</span>
                         <span className="hidden md:inline text-slate-300">•</span>
                         <span>Champigny-sur-Marne</span>
+                        <span className="hidden md:inline text-slate-300">•</span>
+                        <span>Neuilly-Plaisance</span>
                     </div>
                 </div>
             </section>
