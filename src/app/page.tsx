@@ -34,7 +34,7 @@ export default function Home() {
                         </h1>
 
                         <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                            Dépannage, formation IA et assistance administrative à domicile. <br/>
+                            Support Informatique, Dépannage, formation IA et assistance administrative à domicile. <br/>
                             <strong>Ne payez que 50% de la facture</strong> grâce au crédit d'impôt immédiat.
                         </p>
 
