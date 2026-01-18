@@ -1,319 +1,312 @@
 'use client'
 
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Header } from '@/components/header'
-import { CheckCircle2, Shield, Laptop, Phone, Mail, MapPin, Wifi, Lock, GraduationCap, Wrench, ShoppingCart, FileCheck, Sparkles, Code, Star, Briefcase, Brain, MessageCircle, Smile, Zap } from 'lucide-react'
+import ServicesAndPricing from './services-pricing'
+import {
+    Shield, Phone, MapPin,
+    Star, MessageCircle, AlertTriangle, Euro, FileCheck, CheckCircle2, Zap, Smile
+} from 'lucide-react'
 
 export default function Home() {
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-  }
+    const scrollToContact = () => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+    }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-teal-50 to-slate-200">
-      {/* Header */}
-      <Header />
+    return (
+        <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+            {/* Header Component */}
+            <Header />
 
-      {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-12 pb-12 max-w-5xl">
-        <div className="text-center mb-8 pt-8">
-          <h1 className="text-7xl font-bold text-slate-800 mb-6 animate-fade-in-up leading-22" style={{ animationDelay: '0.1s' }}>
-              <span className="text-slate-700">Votre concierge numérique <br/> <span className="text-teal-600">de confiance</span></span>
-          </h1>
-          <p className="text-lg text-slate-700 mb-1 max-w-3xl mx-auto leading-relaxed animate-fade-in-up mt-12" style={{ animationDelay: '0.2s' }}>
-            Un PC lent ? Une imprimante qui boude ? Un site administratif incompréhensible ? Comment utiliser l'IA?
-          </p>
-          <p className="text-2xl font-semibold text-slate-800 mb-2 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            Ne restez pas seul face au numérique.
-          </p>
+            {/* HERO SECTION */}
+            <section className="container mx-auto px-6 pt-12 pb-16 max-w-6xl">
+                <div className="flex flex-col lg:flex-row items-center gap-12 pt-16">
 
-          {/* Prominent Phone Number */}
-          <div className="mb-8 animate-fade-in-up mt-12" style={{ animationDelay: '0.4s' }}>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-1">
-              <a href="tel:+33744985723" className="inline-flex items-center gap-3 text-2xl md:text-3xl font-bold text-slate-800 hover:text-teal-600 transition-all hover:scale-105 cursor-pointer">
-                <Phone className="w-7 h-7 md:w-8 md:h-8 animate-pulse-subtle" />
-                <span>07 44 98 57 23</span>
-              </a>
-              <span className="hidden md:inline text-slate-400">ou</span>
-              <a href="https://wa.me/33744985723" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-all hover:scale-105 cursor-pointer shadow-lg">
-                <MessageCircle className="w-5 h-5" />
-                <span className="font-semibold">WhatsApp</span>
-              </a>
-            </div>
-            <p className="text-sm text-slate-600">Disponible 7j/7 pour vos urgences • Réponse en moins de 2h</p>
-          <div className="animate-fade-in-up mt-8" style={{ animationDelay: '0.5s' }}>
-              <Button size="lg" onClick={scrollToContact} className="bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white text-lg px-8 py-6 shadow-lg shadow-slate-500/30 transition-all hover:scale-105 cursor-pointer">
-                  Prenez rendez-vous maintenant!
-              </Button>
-          </div>
-          </div>
-        </div>
+                    {/* Left Column */}
+                    <div className="lg:w-3/5 text-center lg:text-left">
 
-        {/* Trust Indicators */}
-        <div className="grid md:grid-cols-3 gap-4 mb-12 mt-12">
-          <div className="bg-gradient-to-br from-white to-teal-50 backdrop-blur-sm rounded-xl p-4 border border-teal-200 shadow-sm text-center animate-fade-in-up hover:scale-105 transition-transform cursor-pointer" style={{ animationDelay: '0.6s' }}>
-            <Smile className="w-8 h-8 text-teal-600 mx-auto mb-2" />
-            <p className="font-semibold text-slate-800">Garantie satisfaction</p>
-            <p className="text-sm text-slate-600">Problème non résolu = remboursé</p>
-          </div>
-          <div className="bg-gradient-to-br from-white to-teal-50 backdrop-blur-sm rounded-xl p-4 border border-teal-200 shadow-sm text-center animate-fade-in-up hover:scale-105 transition-transform cursor-pointer" style={{ animationDelay: '0.7s' }}>
-            <Zap className="w-8 h-8 text-teal-600 mx-auto mb-2" />
-            <p className="font-semibold text-slate-800">Intervention rapide</p>
-            <p className="text-sm text-slate-600">Sous 48h en semaine</p>
-          </div>
-          <div className="bg-gradient-to-br from-white to-teal-50 backdrop-blur-sm rounded-xl p-4 border border-teal-200 shadow-sm text-center animate-fade-in-up hover:scale-105 transition-transform cursor-pointer" style={{ animationDelay: '0.8s' }}>
-            <Star className="w-8 h-8 text-teal-600 mx-auto mb-2" />
-            <p className="font-semibold text-slate-800">Service de proximité</p>
-            <p className="text-sm text-slate-600">Déplacement à domicile</p>
-          </div>
-        </div>
-      </section>
+                        <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                            Votre Informatique, <br/>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-700">
+                                Simple & Accessible.
+                            </span>
+                        </h1>
 
-      {/* Services Section */}
-      <section className="bg-slate-50 py-20">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <h3 className="text-4xl font-bold text-center mb-16 text-slate-800">
-            J'interviens chez vous pour :
-          </h3>
+                        <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                            Dépannage, formation IA et assistance administrative à domicile. <br/>
+                            <strong>Ne payez que 50% de la facture</strong> grâce au crédit d'impôt immédiat.
+                        </p>
 
-          {/* Dépannage & Installation */}
-          <div className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center shadow-lg shadow-slate-500/30">
-                <Wrench className="w-7 h-7 text-white" />
-              </div>
-              <h4 className="text-3xl font-bold text-slate-800">Dépannage & Installation</h4>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <Laptop className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:-rotate-6" />
-                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Urgence classique</h5>
-                <p className="text-slate-700 leading-relaxed">
-                  Résolution des pannes PC/Mac, optimisation (lenteurs), configuration Wi-Fi, imprimantes, objets connectés.
-                </p>
-              </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <Wifi className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:rotate-6" />
-                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Installation</h5>
-                <p className="text-slate-700 leading-relaxed">
-                  Mise en service de vos nouveaux appareils pour que tout fonctionne parfaitement dès le premier jour.
-                </p>
-              </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <Briefcase className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:-rotate-12" />
-                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Support TPE</h5>
-                <p className="text-slate-700 leading-relaxed">
-                  Assistance IT pour petites entreprises : réseau, sécurité, maintenance préventive et formation des équipes.
-                </p>
-              </div>
-            </div>
-          </div>
-
-            {/* Conseil & Accompagnement */}
-            <div className="mb-16">
-                <div className="flex items-center gap-3 mb-8">
-                    <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center shadow-lg shadow-slate-500/30">
-                        <Shield className="w-7 h-7 text-white" />
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+                            <Button
+                                size="lg"
+                                onClick={scrollToContact}
+                                className="bg-slate-900 hover:bg-slate-800 text-white text-lg px-8 py-6 rounded-xl shadow-lg transition-transform hover:scale-105 cursor-pointer"
+                            >
+                                Prendre rendez-vous
+                            </Button>
+                            <Button
+                                size="lg"
+                                asChild
+                                className="bg-teal-600 hover:bg-teal-700 text-white text-lg px-8 py-6 rounded-xl shadow-lg transition-transform hover:scale-105 cursor-pointer"
+                            >
+                                <a href="tel:+33744985723" className="flex items-center justify-center gap-2">
+                                    <Phone className="w-5 h-5" />
+                                    07 44 98 57 23
+                                </a>
+                            </Button>
+                        </div>
                     </div>
-                    <h4 className="text-3xl font-bold text-slate-800">Conseil & Accompagnement</h4>
+
+                    {/* Right Column: Value Card */}
+                    <div className="lg:w-2/5 w-full max-w-sm mx-auto animate-pop-in" style={{ animationDelay: '0.5s' }}>
+                        <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 transform rotate-2 hover:rotate-0 transition-transform duration-300 relative">
+
+                            {/* Visual SAP Badge in Top Right Corner */}
+                            <div className="absolute top-0 left-0 w-16 h-16 -rotate-12 scale-250 opacity-90">
+                                <Image
+                                    src="/sap-logo.svg"
+                                    alt="Logo Service à la Personne"
+                                    width={64}
+                                    height={64}
+                                    className="object-contain"
+                                />
+                            </div>
+
+                            <div className="text-center border-b border-slate-100 pb-6 mb-6 pt-2">
+                                <p className="text-slate-500 text-sm font-medium uppercase tracking-wide">Votre avantage fiscal</p>
+                                <div className="flex items-center justify-center gap-4 mt-2">
+                                    <div className="text-right">
+                                        <p className="text-sm text-slate-400 line-through">70€ /h</p>
+                                        <p className="text-3xl font-bold text-slate-900">35€<span className="text-sm font-normal text-slate-500">/h</span></p>
+                                    </div>
+                                    <div className="bg-teal-100 text-teal-700 font-bold px-3 py-1 rounded-lg text-sm">
+                                        -50%
+                                    </div>
+                                </div>
+                                <p className="text-xs text-slate-500 mt-2">Après Crédit d'Impôt*</p>
+                            </div>
+
+                            <div className="space-y-4">
+                                <div className="flex items-start gap-3">
+                                    <Shield className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
+                                    <p className="text-sm text-slate-600">Prestataire agréé Service à la Personne</p>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <Euro className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
+                                    <p className="text-sm text-slate-600">Avance immédiate du crédit d'impôt</p>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <FileCheck className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
+                                    <p className="text-sm text-slate-600">Attestation fiscale fournie</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                        <ShoppingCart className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:rotate-6" />
-                        <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Aide à l'achat</h5>
-                        <p className="text-slate-700 leading-relaxed">
-                            Je vous aide à choisir le bon matériel (PC, smartphone, TV, forfait internet...) selon vos vrais besoins et votre budget, en toute indépendance.
+
+                {/* Trust Indicators */}
+                <div className="grid md:grid-cols-3 gap-4 mb-12 mt-20">
+                    <div className="bg-gradient-to-br from-white to-teal-50 backdrop-blur-sm rounded-xl p-4 border border-teal-200 shadow-sm text-center animate-fade-in-up hover:scale-105 transition-transform cursor-pointer" style={{ animationDelay: '0.6s' }}>
+                        <Smile className="w-8 h-8 text-teal-600 mx-auto mb-2" />
+                        <p className="font-semibold text-slate-800">Pédagogie & Patience</p>
+                        <p className="text-sm text-slate-600">J'explique tout, sans jargon</p>
+                    </div>
+                    <div className="bg-gradient-to-br from-white to-teal-50 backdrop-blur-sm rounded-xl p-4 border border-teal-200 shadow-sm text-center animate-fade-in-up hover:scale-105 transition-transform cursor-pointer" style={{ animationDelay: '0.7s' }}>
+                        <Zap className="w-8 h-8 text-teal-600 mx-auto mb-2" />
+                        <p className="font-semibold text-slate-800">Intervention rapide</p>
+                        <p className="text-sm text-slate-600">Sous 48h en semaine</p>
+                    </div>
+                    <div className="bg-gradient-to-br from-white to-teal-50 backdrop-blur-sm rounded-xl p-4 border border-teal-200 shadow-sm text-center animate-fade-in-up hover:scale-105 transition-transform cursor-pointer" style={{ animationDelay: '0.8s' }}>
+                        <Star className="w-8 h-8 text-teal-600 mx-auto mb-2" />
+                        <p className="font-semibold text-slate-800">Service de proximité</p>
+                        <p className="text-sm text-slate-600">Déplacement à domicile</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* DYNAMIC SERVICES SECTION */}
+            <div id="services">
+                <ServicesAndPricing />
+            </div>
+
+            {/* SAFETY SECTION */}
+            <section className="bg-red-50 border-y border-red-100 py-16">
+                <div className="container mx-auto px-6 max-w-4xl text-center">
+                    <div className="inline-flex items-center justify-center p-3 bg-red-100 rounded-full mb-6 shadow-sm">
+                        <AlertTriangle className="w-8 h-8 text-red-600" />
+                    </div>
+                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                        Vous avez reçu un email ou SMS suspect ?
+                    </h3>
+                    <p className="text-lg text-slate-700 mb-8 leading-relaxed max-w-2xl mx-auto">
+                        <span className="font-bold text-red-700">Ne cliquez sur rien.</span> Dans le doute, appelez-moi. Je vérifie pour vous si c'est une arnaque ou un message officiel (Impôts, Ameli, Banque, Colis).
+                    </p>
+                    <div className="bg-white inline-flex items-center gap-3 rounded-xl px-6 py-3 shadow-md border border-red-200">
+                        <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                        <p className="font-bold text-slate-800 text-base text-left">
+                            Formation "Anti-Arnaque" incluse
                         </p>
                     </div>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                        <FileCheck className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:-rotate-12" />
-                        <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Assistance administrative</h5>
-                        <p className="text-slate-700 leading-relaxed">
-                            Je vous accompagne pas à pas sur les sites web complexes (Impôts, Ameli, banque, prise de rendez-vous...). Fini l'angoisse de "mal cliquer".
+                </div>
+            </section>
+
+            {/* TESTIMONIALS */}
+            <section id="testimonials" className="py-16 bg-white">
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900">Avis Clients</h3>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {/* Review 1 */}
+                        <div className="bg-slate-50 p-6 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div>
+                                <div className="flex text-yellow-400 mb-3">
+                                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
+                                </div>
+                                <p className="text-slate-700 italic mb-4 leading-relaxed">
+                                    "Grâce à vos astuces, j'ai appris à reconnaître les arnaques. Je suis bien plus vigilante et rassurée !"
+                                </p>
+                            </div>
+                            <p className="font-bold text-slate-900 text-sm">— Roxane M.</p>
+                        </div>
+                        {/* Review 2 */}
+                        <div className="bg-slate-50 p-6 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div>
+                                <div className="flex text-yellow-400 mb-3">
+                                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
+                                </div>
+                                <p className="text-slate-700 italic mb-4 leading-relaxed">
+                                    "Simple et rapide. Mon PC était lent, maintenant tout fonctionne. J'ai évité de racheter du matériel."
+                                </p>
+                            </div>
+                            <p className="font-bold text-slate-900 text-sm">— Florient</p>
+                        </div>
+                        {/* Review 3 */}
+                        <div className="bg-slate-50 p-6 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div>
+                                <div className="flex text-yellow-400 mb-3">
+                                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
+                                </div>
+                                <p className="text-slate-700 italic mb-4 leading-relaxed">
+                                    "Très à l'écoute et intervient rapidement. Je recommande vivement pour les seniors."
+                                </p>
+                            </div>
+                            <p className="font-bold text-slate-900 text-sm">— Yvonne D.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CONTACT SECTION - Light, Clean, Inviting */}
+            <section id="contact" className="py-20 bg-gradient-to-br from-teal-50 to-white text-slate-900">
+                <div className="container mx-auto px-6 max-w-4xl text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Besoin d'aide ?</h2>
+                    <p className="text-lg text-slate-600 mb-10">Je suis disponible du Lundi au Samedi, de 9h à 19h.</p>
+
+                    <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                        <a href="tel:+33744985723" className="group flex items-center justify-center gap-4 bg-white text-slate-900 p-6 rounded-xl shadow-md border border-slate-100 hover:shadow-xl hover:border-teal-200 transition-all cursor-pointer">
+                            <div className="bg-teal-50 p-3 rounded-full group-hover:bg-teal-100 transition-colors">
+                                <Phone className="w-6 h-6 text-teal-600" />
+                            </div>
+                            <div className="text-left">
+                                <p className="text-sm text-slate-500 font-semibold">Appelez-moi</p>
+                                <p className="text-xl font-bold">07 44 98 57 23</p>
+                            </div>
+                        </a>
+
+                        <a href="https://wa.me/33744985723" target="_blank" className="group flex items-center justify-center gap-4 bg-[#25D366] text-white p-6 rounded-xl shadow-md hover:shadow-xl hover:bg-[#20bd5a] transition-all cursor-pointer">
+                            <div className="bg-white/20 p-3 rounded-full group-hover:bg-white/30 transition-colors">
+                                <MessageCircle className="w-6 h-6 text-white" />
+                            </div>
+                            <div className="text-left">
+                                <p className="text-sm text-white/90 font-semibold">WhatsApp</p>
+                                <p className="text-xl font-bold">Envoyer un message</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    {/* FIXED: Full town names */}
+                    <div className="mt-12 flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+                        <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-teal-600" /> Le Perreux-sur-Marne</span>
+                        <span className="hidden md:inline text-slate-300">•</span>
+                        <span>Bry-sur-Marne</span>
+                        <span className="hidden md:inline text-slate-300">•</span>
+                        <span>Nogent-sur-Marne</span>
+                        <span className="hidden md:inline text-slate-300">•</span>
+                        <span>Champigny-sur-Marne</span>
+                    </div>
+                </div>
+            </section>
+
+            {/* LEGAL FOOTER */}
+            <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-sm">
+                <div className="container mx-auto px-6 text-center">
+
+                    {/* SAP Logos Row */}
+                    <div className="flex flex-wrap justify-center items-center gap-20 mb-10 bg-white/5 p-6 rounded-2xl mx-auto">
+                        <a
+                            href="https://www.servicesalapersonne.gouv.fr/je-suis-un-particulier"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-16 h-16 relative transition-transform hover:scale-200 cursor-pointer"
+                        >
+                            <Image
+                                src="/sap-logo.svg"
+                                alt="Service à la personne"
+                                fill
+                                className="object-contain"
+                            />
+                        </a>
+                        <a
+                            href="https://www.acces-sap.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-32 h-12 relative transition-transform hover:scale-200 cursor-pointer"
+                        >
+                            <Image
+                                src="/acces-sap-logo.svg"
+                                alt="Accès SAP"
+                                fill
+                                className="object-contain"
+                            />
+                        </a>
+                        <a
+                            href="https://www.urssaf.fr/accueil/services/services-particuliers/service-avance-immediate.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-32 h-12 relative transition-transform hover:scale-200 cursor-pointer"
+                        >
+                            <Image
+                                src="/urssaf-logo.svg"
+                                alt="Avance immédiate Urssaf"
+                                fill
+                                className="object-contain"
+                            />
+                        </a>
+                    </div>
+
+                    <div className="space-y-6">
+                        <p className="font-semibold text-white text-xl">Lebonclick — Assistance Informatique à domicile</p>
+
+                        {/* FIXED: Increased text size for SIRET */}
+                        <div className="flex flex-col md:flex-row justify-center gap-2 md:gap-8 text-slate-300 font-mono text-sm md:text-base">
+                            <p>SIRET : 942 359 886 00028</p>
+                            <span className="hidden md:block text-slate-600">|</span>
+                            <p>N° SAP : B 532 923 984</p>
+                        </div>
+
+                        {/* FIXED: Increased text size for Legal Disclaimer (text-sm instead of xs) */}
+                        <p className="max-w-4xl mx-auto text-sm text-slate-400 leading-relaxed pt-6 border-t border-slate-900">
+                            *Selon l'article 199 sexdecies du Code Général des Impôts. Le crédit d'impôt est déduit de vos impôts ou remboursé si vous êtes non imposable.
+                            Prestations exclusivement réalisées au domicile des particuliers.
+                        </p>
+
+                        <p className="text-sm text-slate-500 pt-2">
+                            &copy; {new Date().getFullYear()} Lebonclick. Tous droits réservés.
                         </p>
                     </div>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                        <Lock className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:rotate-12" />
-                        <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Prévention & Sécurité</h5>
-                        <p className="text-slate-700 leading-relaxed">
-                            Conseils anti-arnaque concrets, sécurisation de vos comptes et protection de vos données.
-                        </p>
-                    </div>
                 </div>
-            </div>
-          {/* Formation & Découverte */}
-          <div>
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center shadow-lg shadow-slate-500/30">
-                <GraduationCap className="w-7 h-7 text-white" />
-              </div>
-              <h4 className="text-3xl font-bold text-slate-800">Formation & Découverte</h4>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <Sparkles className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:-rotate-12" />
-                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Initiation à l'IA</h5>
-                <p className="text-slate-700 leading-relaxed">
-                  Démystifier l'IA, comment elle fonctionne et comment elle peut vous aider.
-                </p>
-              </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <Brain className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:rotate-12" />
-                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">IA Prompting</h5>
-                <p className="text-slate-700 leading-relaxed">
-                  Apprenez à communiquer efficacement avec les outils d'IA pour obtenir les meilleurs résultats.
-                </p>
-              </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-teal-100 hover:shadow-lg hover:shadow-teal-500/20 hover:border-teal-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
-                <Code className="w-10 h-10 text-slate-700 mb-4 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-110 group-hover:-rotate-6" />
-                <h5 className="text-xl font-semibold mb-3 text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Software Tutoring</h5>
-                <p className="text-slate-700 leading-relaxed">
-                  Support codage et aide aux projets web pour débutants et intermédiaires.
-                </p>
-              </div>
-            </div>
-          </div>
+            </footer>
         </div>
-      </section>
-
-      {/* Why Choose Section */}
-      <section className="py-20 bg-gradient-to-b from-white via-slate-100 to-slate-200">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <div className="bg-gradient-to-br from-white via-teal-50/30 to-slate-50 rounded-2xl p-12 text-center border border-teal-100 shadow-lg shadow-teal-500/10">
-            <h3 className="text-3xl font-bold mb-6 text-slate-800">Mon approche</h3>
-            <div className="flex flex-wrap justify-center gap-8 mb-8">
-              <div className="flex items-center gap-2 group cursor-pointer">
-                <CheckCircle2 className="w-6 h-6 text-slate-700 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-125 group-hover:rotate-12" />
-                <span className="text-xl font-semibold text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Simple</span>
-              </div>
-              <div className="flex items-center gap-2 group cursor-pointer">
-                <CheckCircle2 className="w-6 h-6 text-slate-700 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-125 group-hover:-rotate-12" />
-                <span className="text-xl font-semibold text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Rapide</span>
-              </div>
-              <div className="flex items-center gap-2 group cursor-pointer">
-                <CheckCircle2 className="w-6 h-6 text-slate-700 transition-all duration-300 group-hover:text-teal-600 group-hover:scale-125 group-hover:rotate-12" />
-                <span className="text-xl font-semibold text-slate-800 transition-colors duration-300 group-hover:text-teal-600">Pédagogique</span>
-              </div>
-            </div>
-            <p className="text-2xl text-slate-700 font-medium">
-              Vous avez une question ? <span className="text-slate-800 font-bold">Vous avez votre contact.</span>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-200 via-teal-50/40 to-slate-100">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <h3 className="text-4xl font-bold text-center mb-4 text-slate-800">
-            Ce que disent mes clients
-          </h3>
-          <p className="text-center text-slate-600 mb-12 text-lg">
-            La satisfaction de mes clients est ma priorité
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6">
-
-            <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
-                <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-teal-600 text-teal-600" />
-                    ))}
-                </div>
-                <p className="text-slate-700 mb-4 italic">
-                  "Dans le passé, j'ai été victime d'une escroquerie. Grâce à vos astuces, j'ai appris à reconnaître les signes suspects. Je suis bien plus vigilante et je me sens plus en sûreté!"</p>
-              <p className="font-semibold text-slate-800">Roxane M. 57 ans </p>
-            </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
-                  <div className="flex gap-1 mb-4">
-                      {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-teal-600 text-teal-600" />
-                      ))}
-                  </div>
-                  <p className="text-slate-700 mb-4 italic">
-                  "Formidable !!!
-                  Simple ! Rapide  mon imprimante ne marchait plus et mon PC était lent  ! Grâce a l’intervention d’Alex j’évite le changement de matériel
-                  Le moral revient !!! Bravo !!!"
-              </p>
-              <p className="font-semibold text-slate-800">Florient, 69 ans</p>
-          </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 flex flex-col justify-between">
-                  <div className="flex gap-1 mb-4">
-                      {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-teal-600 text-teal-600" />
-                      ))}
-                  </div>
-                  <p className="text-slate-700 mb-4 italic">
-                      "Alex m'a été d'un grand soutien pour mes problèmes informatiques. Il est très à l'écoute et intervient rapidement. Je recommande vivement ses services."
-              </p>
-              <p className="font-semibold text-slate-800">Yvonne D. 67 ans</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="bg-gradient-to-b from-slate-100 via-teal-50/30 to-slate-300 py-20">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <div className="bg-white rounded-2xl shadow-xl shadow-slate-500/20 p-10 md:p-14 border border-slate-200">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4 text-center">Contactez-moi</h2>
-            <p className="text-center text-lg text-slate-700 mb-10">
-              Pour faire un diagnostic ou un simple conseil
-            </p>
-
-            <div className="space-y-6 max-w-sm mx-auto">
-              <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 cursor-pointer">
-                <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-slate-500/30">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm text-slate-700 font-medium">Téléphone</p>
-                  <a href="tel:+33123456789" className="text-lg font-semibold text-slate-800 hover:text-slate-700">
-                    07 44 98 57 23
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 cursor-pointer">
-                <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-slate-500/30">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm text-slate-700 font-medium">Email</p>
-                  <a href="mailto:alex@lebonclick.fr" className="text-lg font-semibold text-slate-800 hover:text-slate-700 break-all">
-                      alex@lebonclick.fr
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-lg border border-slate-200">
-                <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-slate-500/30">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm text-slate-700 font-medium">Zone d'intervention</p>
-                  <p className="text-lg font-semibold text-slate-800">Le Perreux-sur-Marne</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-300 py-10">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-lg mb-2">
-            <strong className="text-white">Lebonclick</strong> — Concierge Numérique
-          </p>
-          <p className="text-sm text-slate-400">
-            &copy; {new Date().getFullYear()} Tous droits réservés.
-          </p>
-        </div>
-      </footer>
-    </div>
-  )
+    )
 }
-
