@@ -1,16 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Lora } from "next/font/google";
+import {Inter, Manrope} from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-    variable: "--font-inter",
+// Configure Manrope for Headings
+const manrope = Manrope({
     subsets: ["latin"],
+    variable: "--font-heading",
     display: "swap",
 });
 
-const lora = Lora({
-    variable: "--font-lora",
+// Configure Inter for Body
+const inter = Inter({
     subsets: ["latin"],
+    variable: "--font-body",
     display: "swap",
 });
 
@@ -64,7 +66,7 @@ export default function RootLayout({
         },
         telephone: '+33744985723',
         priceRange: '$$',
-        areaServed: ["Le Perreux-sur-Marne", "Nogent-sur-Marne", "Bry-sur-Marne", "Neuilly-Plaisance"],
+        areaServed: ["Le Perreux-sur-Marne", "Nogent-sur-Marne", "Bry-sur-Marne", "Neuilly-Plaisance", "Champigny-sur-Marne"],
         // Crucial for SAP visibility
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -85,7 +87,7 @@ export default function RootLayout({
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
         </head>
-        <body className={`${inter.variable} ${lora.variable} antialiased font-sans`}>
+        <body className={`${inter.variable} ${manrope.variable} antialiased font-sans`}>
         {children}
         </body>
         </html>

@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import {MessageCircle, Phone} from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 export function Header() {
@@ -17,6 +16,13 @@ export function Header() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
@@ -48,34 +54,28 @@ export function Header() {
               </p>
             </div>
           </button>
-            <div className="flex items-center gap-4 md:gap-6">
 
-
-                {/* Phone Number - Desktop */}
-                <a
-                    href="tel:+33744985723"
-                    className="hidden md:flex items-center gap-2 bg-gradient-to-r from-teal-600 to-teal-700 text-white px-4 py-2 rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all hover:scale-105 shadow-lg"
-                >
-                    <Phone className="w-5 h-5" />
-                    <span className="text-lg font-bold">07 44 98 57 23</span>
-                </a>
-                <a
-                    href="https://wa.me/33744985723" target="_blank" rel="noopener noreferrer"
-                    className="hidden md:flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-all hover:scale-105 shadow-lg"
-                >
-                    <MessageCircle className="w-5 h-5" />
-                    <span className="text-lg font-bold">WhatsApp</span>
-                </a>
-            </div>
-
-          {/* Phone Number - Mobile */}
-          <a
-            href="tel:+33744985723"
-            className="md:hidden flex items-center gap-1.5 bg-teal-600 text-white px-3 py-1.5 rounded-lg hover:bg-teal-700 transition-all shadow-lg"
-          >
-            <Phone className="w-4 h-4" />
-            <span className="text-sm font-bold">Appeler</span>
-          </a>
+          {/* Navigation Links */}
+          <nav className="flex items-center gap-3 md:gap-6">
+            <button
+              onClick={() => scrollToSection('services')}
+              className="text-sm md:text-base font-semibold text-slate-700 hover:text-teal-600 transition-colors cursor-pointer"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection('testimonials')}
+              className="text-sm md:text-base font-semibold text-slate-700 hover:text-teal-600 transition-colors cursor-pointer"
+            >
+              Avis
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="text-sm md:text-base font-semibold bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-all hover:scale-105 shadow-lg cursor-pointer"
+            >
+              Contact
+            </button>
+          </nav>
         </div>
       </div>
     </header>
