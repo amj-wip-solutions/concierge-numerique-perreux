@@ -27,9 +27,9 @@ export default function Home() {
                     <div className="lg:w-3/5 text-center lg:text-left">
 
                         <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                            Votre Informatique, <br/>
+                            Assistance Informatique <br/>
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-700">
-                                Simple & Accessible.
+                                à Domicile & Service à la Personne
                             </span>
                         </h1>
 
@@ -98,7 +98,7 @@ export default function Home() {
                             <div className="space-y-4">
                                 <div className="flex items-start gap-3">
                                     <Shield className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                                    <p className="text-sm text-slate-600">Prestataire agréé Service à la Personne (SAP)</p>
+                                    <p className="text-sm text-slate-600">Prestataire agréé Service à la Personne (50% de crédit d'impôt)</p>
                                 </div>
                                 <div className="flex items-start gap-3">
                                     <Euro className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />

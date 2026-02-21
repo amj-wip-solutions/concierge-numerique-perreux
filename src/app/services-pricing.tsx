@@ -12,7 +12,7 @@ export default function ServicesAndPricing() {
     const services = [
         {
             icon: <Wrench className="w-8 h-8 text-teal-600" />,
-            title: "Dépannage & Technique",
+            title: "Dépannage & Technique PC/Mac",
             description: "Je règle les pannes matérielles et logicielles du quotidien.",
             items: [
                 "Imprimantes & Scanners",
@@ -34,7 +34,7 @@ export default function ServicesAndPricing() {
         },
         {
             icon: <ShieldCheck className="w-8 h-8 text-teal-600" />,
-            title: "Admin & Sécurité",
+            title: "Assistance Administrative & Sécurité",
             description: "Naviguez sans crainte et gérez vos démarches sans stress.",
             items: [
                 "Aide Admin (Impôts, Ameli...)",
@@ -45,7 +45,7 @@ export default function ServicesAndPricing() {
         },
         {
             icon: <BrainCircuit className="w-8 h-8 text-teal-600" />,
-            title: "Formation & IA",
+            title: "Formation IA (ChatGPT) & Numérique",
             description: "Apprenez à maîtriser vos outils et découvrez l'IA.",
             items: [
                 "Initiation ChatGPT & IA",
@@ -60,7 +60,7 @@ export default function ServicesAndPricing() {
         <section className="py-20 bg-white">
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="text-center mb-16">
-                    <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Mes Services</h3>
+                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Mes Services de Dépannage et Formation Numérique dans le 94 et à Paris</h2>
                     <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                         Une offre complète pour votre vie numérique. <br/>
                         <span className="font-semibold text-teal-700">Pédagogie et patience garanties.</span>
@@ -74,7 +74,7 @@ export default function ServicesAndPricing() {
                             <div className="bg-teal-50 w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                                 {service.icon}
                             </div>
-                            <h4 className="text-lg font-bold text-slate-900 mb-3">{service.title}</h4>
+                            <h3 className="text-lg font-bold text-slate-900 mb-3">{service.title}</h3>
                             <p className="text-slate-600 mb-5 text-sm leading-relaxed min-h-[40px]">
                                 {service.description}
                             </p>
@@ -101,7 +101,7 @@ export default function ServicesAndPricing() {
 
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
                         <div className="text-center md:text-left">
-                            <h4 className="text-3xl font-bold mb-2">Tarification Progressive</h4>
+                            <h2 className="text-3xl font-bold mb-2">Tarifs avec 50% de Crédit d'Impôt Immédiat</h2>
                             <p className="text-slate-300 text-lg">Pas de frais cachés. Déplacement inclus*.</p>
                         </div>
                         <div className="flex flex-col sm:flex-row items-center gap-4">

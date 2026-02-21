@@ -26,17 +26,19 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
     metadataBase: new URL('https://lebonclick.fr'),
     title: {
-        default: "Dépannage Informatique & Formation Seniors | Le Perreux (94)",
+        default: "Assistance Informatique à Domicile | Le Perreux-sur-Marne & Paris | Lebonclick",
         template: "%s | Lebonclick"
     },
-    description: "Expert patience pour seniors : Dépannage ordinateur, tablette, Internet à domicile. Agréé Service à la Personne (-50% crédit d'impôt). Le Perreux, Nogent, Bry.",
+    description: "Dépannage informatique, assistance administrative et formation IA à domicile. Agréé Service à la Personne (50% de crédit d'impôt). Déplacement au Perreux, 94 et Paris.",
     keywords: [
-        "Dépannage informatique Le Perreux",
+        "Assistance informatique domicile",
+        "Dépannage informatique Le Perreux-sur-Marne",
+        "Prestataire informatique Val-de-Marne",
+        "Assistance informatique et internet à domicile",
         "Formation internet seniors",
-        "Assistance informatique domicile 94",
-        "Installation imprimante",
-        "Cours tablette senior",
-        "Service à la personne informatique"
+        "Formation IA ChatGPT domicile",
+        "Service à la personne informatique 94",
+        "Crédit impôt aide informatique",
     ],
 };
 
@@ -50,13 +52,15 @@ export default function RootLayout({
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         name: 'Lebonclick',
-        image: 'https://lebonclick.fr/og-image.png', // Make sure to add this image later
-        description: "Service d'aide informatique à domicile agréé SAP pour seniors au Perreux-sur-Marne.",
+        image: 'https://lebonclick.fr/og-image.png',
+        '@id': 'https://lebonclick.fr/',
+        url: 'https://lebonclick.fr/',
+        description: "Support Informatique, Dépannage, formation IA et assistance administrative à domicile au Perreux-sur-Marne, Val-de-Marne et Paris. Prestataire agréé Service à la Personne.",
         address: {
             '@type': 'PostalAddress',
             addressLocality: 'Le Perreux-sur-Marne',
             postalCode: '94170',
-            addressRegion: 'Val-de-Marne',
+            addressRegion: 'Île-de-France',
             addressCountry: 'FR',
         },
         geo: {
@@ -65,16 +69,23 @@ export default function RootLayout({
             longitude: 2.5048,
         },
         telephone: '+33744985723',
-        priceRange: '$$',
-        areaServed: ["Le Perreux-sur-Marne", "Nogent-sur-Marne", "Bry-sur-Marne", "Neuilly-Plaisance", "Champigny-sur-Marne"],
-        // Crucial for SAP visibility
+        priceRange: '50€ - 100€',
+        areaServed: [
+            "Le Perreux-sur-Marne",
+            "Nogent-sur-Marne",
+            "Bry-sur-Marne",
+            "Neuilly-Plaisance",
+            "Champigny-sur-Marne",
+            "Vincennes",
+            "Paris",
+        ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Services Informatiques Domicile",
             "itemListElement": [
                 { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dépannage PC/Mac Domicile" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formation Internet Seniors" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Assistance Administrative" } }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formation IA (ChatGPT) & Numérique" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Assistance Administrative & Sécurité" } }
             ]
         }
     };
