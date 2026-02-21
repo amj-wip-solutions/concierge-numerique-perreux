@@ -101,29 +101,53 @@ export default function ServicesAndPricing() {
 
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
                         <div className="text-center md:text-left">
-                            <h4 className="text-3xl font-bold mb-2">Tarif Unique</h4>
+                            <h4 className="text-3xl font-bold mb-2">Tarification Progressive</h4>
                             <p className="text-slate-300 text-lg">Pas de frais cachés. Déplacement inclus*.</p>
                         </div>
-                        <div className="flex items-center gap-6">
-                            <div className="text-right hidden md:block">
-                                <p className="text-sm text-slate-400">Prix public</p>
-                                <p className="text-2xl font-bold line-through decoration-red-500 decoration-2">70€ /h</p>
+                        <div className="flex flex-col sm:flex-row items-center gap-4">
+                            {/* First hour */}
+                            <div className="flex flex-col items-center">
+                                <p className="text-xs text-slate-400 uppercase font-bold tracking-wider mb-2">1ère heure</p>
+                                <div className="flex items-center gap-3">
+                                    <div className="text-right hidden md:block">
+                                        <p className="text-xs text-slate-400">Prix public</p>
+                                        <p className="text-xl font-bold line-through decoration-red-500 decoration-2">100€</p>
+                                    </div>
+                                    <div className="bg-white text-slate-900 px-5 py-3 rounded-xl shadow-lg">
+                                        <p className="text-xs text-slate-500 uppercase font-bold tracking-wider mb-1">Coût réel</p>
+                                        <p className="text-3xl font-extrabold text-teal-600">50€</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="bg-white text-slate-900 px-6 py-3 md:px-8 md:py-4 rounded-xl shadow-lg transform md:scale-110">
-                                {/* Increased label size */}
-                                <p className="text-xs md:text-sm text-slate-500 uppercase font-bold tracking-wider mb-1">Coût réel pour vous</p>
-                                <p className="text-3xl md:text-4xl font-extrabold text-teal-600">35€ <span className="text-lg md:text-xl text-slate-400 font-normal">/h</span></p>
+
+                            <div className="text-slate-500 font-bold text-xl hidden sm:block">+</div>
+
+                            {/* Subsequent hours */}
+                            <div className="flex flex-col items-center">
+                                <p className="text-xs text-slate-400 uppercase font-bold tracking-wider mb-2">Heures suivantes</p>
+                                <div className="flex items-center gap-3">
+                                    <div className="text-right hidden md:block">
+                                        <p className="text-xs text-slate-400">Prix public</p>
+                                        <p className="text-xl font-bold line-through decoration-red-500 decoration-2">70€ /h</p>
+                                    </div>
+                                    <div className="bg-teal-600 text-white px-5 py-3 rounded-xl shadow-lg">
+                                        <p className="text-xs text-teal-200 uppercase font-bold tracking-wider mb-1">Coût réel</p>
+                                        <p className="text-3xl font-extrabold">35€ <span className="text-lg text-teal-200 font-normal">/h</span></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* FIXED: Increased font size (text-sm) and full town names */}
                     <div className="text-sm text-slate-300 mt-8 text-center md:text-left border-t border-slate-700 pt-6 leading-relaxed opacity-90">
                         <p className="mb-2">
                             *Déplacement offert : Le Perreux-sur-Marne, Nogent-sur-Marne, Bry-sur-Marne, Champigny-sur-Marne, Neuilly-Plaisance.
                         </p>
+                        <p className="mb-2">
+                            Première heure indivisible (100€), puis facturation à 70€/h à la ½ heure.
+                        </p>
                         <p>
-                            Première heure indivisible, puis facturation au ¼ d'heure.
+                            Crédit d'impôt <span className="text-teal-400 font-semibold">Service à la Personne — 50% de réduction</span> applicable sur l'ensemble de la prestation.
                         </p>
                     </div>
                 </div>

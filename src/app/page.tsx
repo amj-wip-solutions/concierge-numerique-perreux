@@ -74,18 +74,25 @@ export default function Home() {
                                 />
                             </div>
 
-                            <div className="text-center border-b border-slate-100 pb-6 mb-6 pt-2">
-                                <p className="text-slate-500 text-sm font-medium uppercase tracking-wide">Votre avantage fiscal</p>
-                                <div className="flex items-center justify-center gap-4 mt-2">
-                                    <div className="text-right">
-                                        <p className="text-sm text-slate-400 line-through">70€ /h</p>
-                                        <p className="text-3xl font-bold text-slate-900">35€<span className="text-sm font-normal text-slate-500">/h</span></p>
+                            <div className="border-b border-slate-100 pb-6 mb-6 pt-2">
+                                <p className="text-slate-500 text-sm font-medium uppercase tracking-wide text-center">Votre avantage fiscal</p>
+                                <div className="flex items-center justify-center gap-3 mt-3">
+                                    <div className="text-center">
+                                        <p className="text-xs text-slate-400 mb-1">1ère heure</p>
+                                        <p className="text-xs text-slate-400 line-through">100€</p>
+                                        <p className="text-2xl font-bold text-slate-900">50€</p>
                                     </div>
-                                    <div className="bg-teal-100 text-teal-700 font-bold px-3 py-1 rounded-lg text-sm">
+                                    <div className="text-slate-300 font-bold text-lg">+</div>
+                                    <div className="text-center">
+                                        <p className="text-xs text-slate-400 mb-1">Heures suiv.</p>
+                                        <p className="text-xs text-slate-400 line-through">70€/h</p>
+                                        <p className="text-2xl font-bold text-teal-600">35€<span className="text-sm font-normal text-slate-500">/h</span></p>
+                                    </div>
+                                    <div className="bg-teal-100 text-teal-700 font-bold px-3 py-1 rounded-lg text-sm self-center">
                                         -50%
                                     </div>
                                 </div>
-                                <p className="text-xs text-slate-500 mt-2">Après Crédit d'Impôt*</p>
+                                <p className="text-xs text-slate-500 mt-2 text-center">Après Crédit d'Impôt*</p>
                             </div>
 
                             <div className="space-y-4">
